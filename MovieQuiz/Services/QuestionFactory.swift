@@ -75,7 +75,7 @@ func loadData() {
         case .failure(let error):
             self.delegate?.didFailToLoadData(with: error) // сообщаем ооб ошибке нашему контроллеру
         }
+        }
     }
-}
 }
 }

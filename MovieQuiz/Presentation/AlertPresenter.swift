@@ -17,12 +17,13 @@ struct AlertPresenter: AlertProtocol {
                                     title: result.title,
                                     message: result.message,
                                     preferredStyle: .alert)
-            
+        
         let action = UIAlertAction(title: result.buttonText, style: .default)
         
         
         alert.addAction(action)
             
         viewController?.present(alert, animated: true, completion: nil)
+        alert.view.accessibilityIdentifier = "Game results"
 }
 }
